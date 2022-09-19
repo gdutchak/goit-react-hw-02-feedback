@@ -1,3 +1,4 @@
+import PropTypes, { shape } from 'prop-types';
 import { FeedbackButton } from "./FeedbackOptions.styled"
 
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => (
@@ -5,3 +6,8 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => (
         onClick={onLeaveFeedback} name={option}>{option}</FeedbackButton>)
     }</>
 )
+
+FeedbackOptions.propTypes = {
+    options: PropTypes.arrayOf(shape),
+    onLeaveFeedback: PropTypes.func,
+}
