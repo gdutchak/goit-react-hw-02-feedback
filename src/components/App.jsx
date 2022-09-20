@@ -27,7 +27,7 @@ export class App extends Component {
     const { good } = this.state;
     if (good > 0) {
       const sum = (good * 100) / this.countTotalFeedback();
-      return sum.toFixed(1);
+      return sum.toFixed(0);
     }
     return 0
   };

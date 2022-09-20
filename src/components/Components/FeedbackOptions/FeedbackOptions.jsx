@@ -1,4 +1,4 @@
-import PropTypes, { shape } from 'prop-types';
+import PropTypes from 'prop-types';
 import { FeedbackButton } from "./FeedbackOptions.styled"
 
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => (
@@ -8,6 +8,6 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => (
 )
 
 FeedbackOptions.propTypes = {
-    options: PropTypes.arrayOf(shape),
-    onLeaveFeedback: PropTypes.func,
+    options: PropTypes.arrayOf(PropTypes.string).isRequired,
+    onLeaveFeedback: PropTypes.func.isRequired,
 }
